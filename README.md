@@ -1,6 +1,6 @@
-# example
+# Flow chat app
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
