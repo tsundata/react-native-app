@@ -65,7 +65,10 @@ class _ChatPageState extends State<ChatPage> {
                   },
                   child: const Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('Photo'),
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text('Photo'),
+                    ),
                   ),
                 ),
                 TextButton(
@@ -75,14 +78,20 @@ class _ChatPageState extends State<ChatPage> {
                   },
                   child: const Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('File'),
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text('File'),
+                    ),
                   ),
                 ),
                 TextButton(
                   onPressed: () => Navigator.pop(context),
                   child: const Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('Cancel'),
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text('Cancel'),
+                    ),
                   ),
                 ),
               ],
@@ -185,6 +194,11 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Chat(
+        showUserNames: true,
+        showUserAvatars: true,
+        theme: const DefaultChatTheme(
+          primaryColor: Colors.blueAccent,
+        ),
         messages: _messages,
         onAttachmentPressed: _handleAtachmentPressed,
         onMessageTap: _handleMessageTap,
