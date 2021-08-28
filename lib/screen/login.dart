@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:get/get.dart';
+
+class Controller extends GetxController {
+  var count = 0.obs;
+  increment() => count++;
+}
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -20,6 +26,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    final Controller c = Get.put(Controller());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -61,7 +68,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: screenHeight * .05),
             GFButton(
-              onPressed: (){},
+              onPressed: (){
+                c.increment();
+                Get.toNamed('/chat');
+              },
               text: "Login",
               shape: GFButtonShape.square,
             ),

@@ -1,5 +1,7 @@
+import 'package:flow/screen/chat.dart';
 import 'package:flow/screen/login.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
@@ -11,8 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginPage(),
+    return GetMaterialApp(
+      title: 'Flow',
+      initialRoute: '/',
+      routes: {
+        '/chat': (context) => ChatPage(),
+        '/': (context) => LoginPage(),
+      },
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
     );
   }
 }
