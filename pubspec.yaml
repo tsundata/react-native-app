@@ -24,17 +24,45 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.3
-  file_picker: ^4.0.0
-  flutter_chat_ui: ^1.2.0
-  image_picker: ^0.8.3+2
   intl: ^0.17.0
   mime: ^1.0.0
   open_file: ^3.2.1
   uuid: ^3.0.4
+  dio: ^4.0.0
+  shared_preferences: ^2.0.7
+  permission_handler: ^8.1.4+2
+  url_launcher: ^6.0.9
+  sqflite: ^2.0.0+4
+  flutter_local_notifications: ^8.1.1+1
+  protobuf: ^2.0.0
+  get_it: ^7.2.0
+  cached_network_image: ^3.1.0
+  geolocator: ^7.4.1
+  path_provider: ^2.0.2
+  share: ^2.0.4
+  json_serializable: ^4.1.4
+  just_audio: ^0.9.7
+  video_player: ^2.1.14
+  logger: ^1.1.0
+
+  # UI
+  cupertino_icons: ^1.0.3
+  file_picker: ^4.0.0
+  flutter_chat_ui:
+    git:
+      url: git@github.com:tsundata/flutter_chat_ui.git
+  flutter_chat_types:
+    git:
+      url: git@github.com:tsundata/flutter_chat_types.git
+  image_picker: ^0.8.3+2
+  webview_flutter: ^2.0.12
+  pull_to_refresh: ^2.0.0
+  fluttertoast: ^8.0.8
+  badges: ^2.0.1
+  timeline_tile: ^2.0.0
+  flutter_form_builder: ^6.0.1
+  charts_flutter: ^0.11.0
+  flutter_html: ^2.1.1
 
 dev_dependencies:
   flutter_test:
