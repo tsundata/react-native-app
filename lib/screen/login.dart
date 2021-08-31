@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: screenHeight * .05),
             GFButton(
-              onPressed: (){
+              onPressed: () {
                 c.increment();
                 Get.toNamed('/chat');
               },
