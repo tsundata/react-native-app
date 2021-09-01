@@ -18,6 +18,8 @@ class UserInfo {
     this.updatedAt,
   });
 
-  factory UserInfo.fromJson(Map<String, dynamic> json) => _$UserInfoFromJson(json);
+  factory UserInfo.fromJson(Map<String, dynamic> json) =>
+      _$UserInfoFromJson(json);
+
   Map<String, dynamic> toJson() => _$UserInfoToJson(this);
 }
