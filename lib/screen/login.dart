@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                   username = value;
                 });
               },
-              labelText: "Username",
+              labelText: 'username'.tr,
               errorText: usernameError,
               keyboardType: TextInputType.text,
               textInputAction: TextInputAction.next,
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                   password = value;
                 });
               },
-              labelText: "Password",
+              labelText: 'password'.tr,
               errorText: passwordError,
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.next,
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
             GFButton(
               onPressed: () {
                 c.increment();
-                Get.toNamed('/chat');
+                Get.toNamed('/list');
               },
               text: "Login",
               shape: GFButtonShape.square,
