@@ -24,3 +24,11 @@ dart pub global activate protoc_plugin
 # usage
 protoc -I=lib/model/pb --dart_out=lib/model/pb lib/model/pb/*.proto
 ```
+
+## code
+
+```shell
+flutter pub run build_runner build
+
+flutter pub run build_runner serve --delete-conflicting-outputs
+```
