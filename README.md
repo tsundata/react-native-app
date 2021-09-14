@@ -28,8 +28,9 @@ protoc -I=lib/model/pb --dart_out=lib/model/pb lib/model/pb/*.proto
 ## code
 
 ```shell
+# Install
+flutter pub global activate get_cli
+
 # Generating
-flutter pub run build_runner build
-# Watch
-flutter pub run build_runner serve --delete-conflicting-outputs
+get generate locales assets/locales
 ```
