@@ -1,7 +1,9 @@
-import 'package:get/get.dart';
-import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
-import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
+
+import 'package:flutter/services.dart' show rootBundle;
+
+import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'package:get/get.dart';
 
 class ChatController extends GetxController {
   var messages = <types.Message>[].obs;
@@ -27,5 +29,9 @@ class ChatController extends GetxController {
         .map((e) => types.Message.fromJson(e as Map<String, dynamic>))
         .toList();
     messages.value = data;
+  }
+
+  void addMessage(types.Message message) {
+    messages.insert(0, message);
   }
 }
