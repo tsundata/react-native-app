@@ -24,11 +24,13 @@ class HomeView extends GetView<HomeController> {
             GFDrawerHeader(
               currentAccountPicture: GFAvatar(
                 radius: 80.0,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
               ),
               otherAccountsPictures: <Widget>[
                 Image(
-                  image: NetworkImage("https://cdn.pixabay.com/photo/2019/12/20/00/03/road-4707345_960_720.jpg"),
+                  image: NetworkImage(
+                      "https://cdn.pixabay.com/photo/2019/12/20/00/03/road-4707345_960_720.jpg"),
                   fit: BoxFit.cover,
                 ),
                 GFAvatar(
@@ -61,16 +63,39 @@ class HomeView extends GetView<HomeController> {
       ),
       floatingActionButton:
           FloatingActionButton(child: Icon(Icons.add), onPressed: _onAdd),
-      body: Center(
-        child: Text(
-          'List',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: ListView(
+        children: [
+          GFListTile(
+            avatar: GFAvatar(
+              shape: GFAvatarShape.standard,
+              backgroundImage: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg'),
+            ),
+            titleText: 'Assistant',
+            subTitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+            onTap: _onChat,
+          ),
+          GFListTile(
+            avatar: GFAvatar(
+              shape: GFAvatarShape.standard,
+              backgroundImage: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2019/12/20/00/03/road-4707345_960_720.jpg'),
+            ),
+            titleText: 'Group a',
+            subTitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+            icon: Icon(Icons.volume_mute_outlined),
+            onTap: _onChat,
+          ),
+        ],
       ),
     );
   }
 
   void _onAdd() {
     Get.toNamed(Routes.GROUP);
+  }
+
+  void _onChat() {
+    Get.toNamed(Routes.CHAT);
   }
 }
