@@ -10,6 +10,12 @@ abstract class Routes {
   static const SETTING = _Paths.SETTING;
   static const PROFILE = _Paths.PROFILE;
   static const GROUP = _Paths.GROUP;
+  static const BOT = _Paths.BOT;
+  static const MEMO = _Paths.MEMO;
+  static const OAUTH = _Paths.OAUTH;
+  static const CREDENTIAL = _Paths.CREDENTIAL;
+  static const ACTION = _Paths.ACTION;
+  static const ROLE = _Paths.ROLE;
 }
 
 abstract class _Paths {
@@ -19,4 +25,10 @@ abstract class _Paths {
   static const SETTING = '/setting';
   static const PROFILE = '/profile';
   static const GROUP = '/group';
+  static const BOT = '/bot';
+  static const MEMO = '/memo';
+  static const OAUTH = '/oauth';
+  static const CREDENTIAL = '/credential';
+  static const ACTION = '/action';
+  static const ROLE = '/role';
 }
