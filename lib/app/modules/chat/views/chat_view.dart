@@ -31,6 +31,9 @@ class ChatView extends GetView<ChatController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Chat'),
+      ),
       body: Obx(() => Chat(
             showUserNames: true,
             showUserAvatars: true,
@@ -41,9 +44,7 @@ class ChatView extends GetView<ChatController> {
             onSendPressed: _handleSendPressed,
             onMessageTap: _handleMessageTap,
             user: controller.user,
-            l10n: const ChatL10nEn(
-              inputPlaceholder: 'Send Message'
-            ),
+            l10n: const ChatL10nEn(inputPlaceholder: 'Send Message'),
           )),
     );
   }
