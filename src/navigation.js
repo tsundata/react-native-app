@@ -1,5 +1,8 @@
-import React, {Fragment} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import React, {useRef} from 'react';
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   BottomNavigation,
@@ -12,7 +15,6 @@ import NotificationsScreen from './screens/Notifications/NotificationsScreen';
 import {MyWeb} from './screens/web';
 import {createStackNavigator} from '@react-navigation/stack';
 import ChatScreen from './screens/Chat/ChatScreen';
-import {navigationRef} from './helpers/NavigationHelper';
 import {observer} from 'mobx-react';
 import {useRootStore} from './stores/root';
 import LoginScreen from './screens/Login/LoginScreen';
@@ -64,26 +66,45 @@ const TabNavigator = () => (
 );
 
 export const AppNavigator = observer(() => {
+  const navigationRef = useNavigationContainerRef();
+  const routeNameRef = useRef();
   const {authStore} = useRootStore();
   return (
     <NavigationContainer
       ref={navigationRef}
-      onReady={() => console.log(navigationRef.current.getCurrentRoute().name)}
-      onStateChange={async () => {
+      onReady={() => {
+        routeNameRef.current = navigationRef.getCurrentRoute().name;
+      }}
+      onStateChange={() => {
+        const previousRouteName = routeNameRef.current;
+        const currentRouteName = navigationRef.getCurrentRoute().name;
+
+        if (previousRouteName !== currentRouteName) {
+          // await Analytics.setCurrentScreen(currentRouteName);
+          console.log(currentRouteName);
+        }
+
         // Save the current route name for later comparison
-        console.log(navigationRef.current.getCurrentRoute().name);
+        routeNameRef.current = currentRouteName;
       }}>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {authStore.isLogin ? (
-          <Fragment>
+          <Stack.Group>
             <Stack.Screen name="Tab" component={TabNavigator} />
             <Stack.Screen name="Web" component={MyWeb} />
             <Stack.Screen name="Chat" component={ChatScreen} />
-          </Fragment>
+          </Stack.Group>
         ) : (
-          <Fragment>
-            <Stack.Screen name="Login" component={LoginScreen} />
-          </Fragment>
+          <Stack.Group>
+            <Stack.Screen
+              name="Login"
+              component={LoginScreen}
+              options={{
+                title: 'Sign in',
+                animationTypeForReplace: authStore.isLogin ? 'pop' : 'push',
+              }}
+            />
+          </Stack.Group>
         )}
       </Stack.Navigator>
     </NavigationContainer>
