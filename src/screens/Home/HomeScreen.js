@@ -9,7 +9,6 @@ import {
 } from '@ui-kitten/components';
 import styles from './HomeScreen.style';
 import {observer} from 'mobx-react';
-import {useRootStore} from '../../stores/root';
 import {Group} from '../../models/message';
 import {ImageStyle} from 'react-native';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout';
@@ -18,8 +17,6 @@ import {GroupItem} from '../../components/GroupItem';
 const SearchIcon = (style: ImageStyle) => <Icon {...style} name="search" />;
 
 const HomeScreenComponent = observer(({eva: {style}, navigation}) => {
-  const {authStore} = useRootStore();
-
   const initialGroups = [
     Group.data1(),
     Group.data2(),

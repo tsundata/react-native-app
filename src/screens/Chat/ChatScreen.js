@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {withStyles} from '@ui-kitten/components';
+import React, {useState} from 'react';
+import {TopNavigation, withStyles} from '@ui-kitten/components';
 import styles from './ChatScreen.style';
 import {MessageType, Chat, defaultTheme} from '@flyerhq/react-native-chat-ui';
-import {SafeAreaProvider} from 'react-native-safe-area-context/src/SafeAreaContext';
 import {launchImageLibrary} from 'react-native-image-picker';
 import DocumentPicker from 'react-native-document-picker';
 import {open} from 'react-native-file-viewer';
 import {useActionSheet} from '@expo/react-native-action-sheet';
 import {PreviewData} from '@flyerhq/react-native-link-preview';
-import {View} from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 import {ReactNode} from 'react';
 
 const uuidv4 = () => {
@@ -170,7 +169,8 @@ const ChatScreenComponent = () => {
   };
 
   return (
-    <SafeAreaProvider>
+    <SafeAreaView style={{flex: 1}} edges={['top', 'left', 'right']}>
+      <TopNavigation title="Chat" alignment={'center'} />
       <Chat
         messages={messages}
         onAttachmentPress={handleAttachmentPress}
@@ -188,7 +188,7 @@ const ChatScreenComponent = () => {
         l10nOverride={{inputPlaceholder: 'Here'}}
         locale="en"
       />
-    </SafeAreaProvider>
+    </SafeAreaView>
   );
 };
 
