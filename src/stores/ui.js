@@ -1,4 +1,6 @@
 import {makeAutoObservable, observable} from 'mobx';
+import {Platform, ToastAndroid} from 'react-native';
+import AlertIOS from 'react-native/Libraries/Alert/Alert';
 
 export class UiStore {
   language = 'en_US';
@@ -28,5 +30,10 @@ export class UiStore {
   showToast(text) {
     console.log(text);
     this.toast = text;
+    if (Platform.OS === 'android') {
+      ToastAndroid.show(text, ToastAndroid.SHORT);
+    } else {
+      AlertIOS.alert(text);
+    }
   }
 }

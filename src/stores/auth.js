@@ -1,5 +1,6 @@
 import {makeAutoObservable, runInAction} from 'mobx';
 import AsyncStorage from '@react-native-community/async-storage';
+import {login} from '../api/api';
 
 export class AuthStore {
   token = '';
@@ -33,10 +34,19 @@ export class AuthStore {
       this.rootStore.uiStore.showToast('Password is required');
       return;
     }
-    this.isLogin = true;
-    this.token = 'qwerty';
-    AsyncStorage.setItem('@token', this.token);
-    AsyncStorage.setItem('@isLogin', this.isLogin.toString());
+    login(username, password).then(res => {
+      if (res.status === 200 || res.status === 201) {
+        runInAction(() => {
+          this.token = res.data.token;
+          this.isLogin = true;
+        });
+        AsyncStorage.setItem('@token', res.data.token);
+        AsyncStorage.setItem('@isLogin', 'true');
+        this.rootStore.uiStore.showToast('Login success');
+      } else {
+        this.rootStore.uiStore.showToast('Login failed');
+      }
+    });
   }
 
   logout() {
