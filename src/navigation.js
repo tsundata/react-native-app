@@ -41,9 +41,9 @@ const SettingsStack = () => (
 
 const TabStack = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Home" component={HomeStack} />
-    <Tab.Screen name="Notifications" component={NotificationsStack} />
-    <Tab.Screen name="Settings" component={SettingsStack} />
+    <Tab.Screen name="HomeTab" component={HomeStack} />
+    <Tab.Screen name="NotificationsTab" component={NotificationsStack} />
+    <Tab.Screen name="SettingsTab" component={SettingsStack} />
   </Tab.Navigator>
 );
 

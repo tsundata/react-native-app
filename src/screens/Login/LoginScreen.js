@@ -9,12 +9,11 @@ const LoginScreen = ({navigation}) => {
   const [password, setPassword] = React.useState('');
   const [passwordVisible, setPasswordVisible] = React.useState(false);
 
-  const onPasswordIconPress = (): void => {
-    setPasswordVisible(!passwordVisible);
-  };
+  const handleChangeUsername = (event: any) => setUsername(event.target.value);
+  const handleChangePassword = (event: any) => setPassword(event.target.value);
 
   return (
-    <Center>
+    <Center safeArea>
       <View>
         <View>
           <Text category="h1" status="control">
@@ -28,17 +27,19 @@ const LoginScreen = ({navigation}) => {
           <Input
             placeholder="username"
             value={username}
-            onChangeText={setUsername}
+            onChange={handleChangeUsername}
           />
           <Input
             placeholder="password"
             value={password}
-            onChangeText={setPassword}
+            onChange={handleChangePassword}
           />
         </Box>
         <Button
           onPress={() => {
             //navigation.navigate('Home');
+            console.log(username);
+            console.log(password);
             authStore.login(username, password);
           }}>
           Login

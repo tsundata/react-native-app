@@ -1,6 +1,6 @@
 import React from 'react';
 import {Group} from '../../models/message';
-import {Box, Center, FlatList} from 'native-base';
+import {Box, Button, Center, FlatList, HStack, Stack, Text} from 'native-base';
 
 const HomeScreen = ({navigation}) => {
   const initialGroups = [
@@ -24,7 +24,14 @@ const HomeScreen = ({navigation}) => {
     <Center safeArea>
       <FlatList
         data={initialGroups}
-        renderItem={({item}) => <Box>{item.text}</Box>}
+        renderItem={({item}) => (
+          <Stack space={3} mb={5} alignItems="center">
+            <HStack alignItems="center">
+              <Text mr={10}>{item.text}</Text>
+              <Button onPress={onItemPress}>chat</Button>
+            </HStack>
+          </Stack>
+        )}
       />
     </Center>
   );
