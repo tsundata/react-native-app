@@ -1,17 +1,9 @@
 import React from 'react';
 import {SafeAreaView, Text, TouchableWithoutFeedback, View} from 'react-native';
-import {Button, Icon, Input, Layout, withStyles} from '@ui-kitten/components';
-import {ImageStyle} from 'react-native';
-import {IconElement} from '@ui-kitten/components';
-import {ReactElement} from 'react';
-import styles from './LoginScreen.style';
 import {useRootStore} from '../../stores/root';
+import {Box, Button, Center, Input} from 'native-base';
 
-const PersonIcon = (style: ImageStyle): IconElement => (
-  <Icon {...style} name="person-outline" />
-);
-
-const LoginScreenComponent = ({eva: {style}, navigation}) => {
+const LoginScreen = ({navigation}) => {
   const {authStore} = useRootStore();
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -21,40 +13,30 @@ const LoginScreenComponent = ({eva: {style}, navigation}) => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const renderPasswordIcon = (props): ReactElement => (
-    <TouchableWithoutFeedback onPress={onPasswordIconPress}>
-      <Icon {...props} name={passwordVisible ? 'eye-off' : 'eye'} />
-    </TouchableWithoutFeedback>
-  );
-
   return (
-    <SafeAreaView>
-      <View style={style.container}>
-        <View style={style.headerContainer}>
+    <Center>
+      <View>
+        <View>
           <Text category="h1" status="control">
             Login
           </Text>
-          <Text style={style.signInLabel} category="s1" status="control">
+          <Text category="s1" status="control">
             Sign in to your account
           </Text>
         </View>
-        <Layout level="1">
+        <Box>
           <Input
             placeholder="username"
-            accessoryRight={PersonIcon}
             value={username}
             onChangeText={setUsername}
           />
           <Input
-            style={style.passwordInput}
             placeholder="password"
-            accessoryRight={renderPasswordIcon}
             value={password}
             onChangeText={setPassword}
           />
-        </Layout>
+        </Box>
         <Button
-          style={style.signUpButton}
           onPress={() => {
             //navigation.navigate('Home');
             authStore.login(username, password);
@@ -62,9 +44,8 @@ const LoginScreenComponent = ({eva: {style}, navigation}) => {
           Login
         </Button>
       </View>
-    </SafeAreaView>
+    </Center>
   );
 };
 
-const LoginScreen = withStyles(LoginScreenComponent, styles);
 export default LoginScreen;

@@ -1,13 +1,13 @@
 import React from 'react';
 import {Text} from 'react-native';
 import {useRootStore} from '../../stores/root';
-import {Button} from '@ui-kitten/components';
+import {Button, Center} from 'native-base';
 
 const SettingsScreen = ({navigation, route}) => {
   const {authStore} = useRootStore();
 
   return (
-    <>
+    <Center safeArea>
       <Text style={{textAlign: 'center', margin: 15}}>This is Settings</Text>
       <Button
         onPress={() => {
@@ -15,7 +15,7 @@ const SettingsScreen = ({navigation, route}) => {
         }}>
         Logout
       </Button>
-    </>
+    </Center>
   );
 };
 

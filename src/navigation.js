@@ -1,44 +1,26 @@
-import React, {useRef} from 'react';
+import React, {useRef, Fragment} from 'react';
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {
-  BottomNavigation,
-  BottomNavigationTab,
-  Icon,
-} from '@ui-kitten/components';
 import HomeScreen from './screens/Home/HomeScreen';
-import SettingsScreen from './screens/Settings/SettingsScreen';
-import NotificationsScreen from './screens/Notifications/NotificationsScreen';
 import {MyWeb} from './screens/web';
 import {createStackNavigator} from '@react-navigation/stack';
-import ChatScreen from './screens/Chat/ChatScreen';
 import {observer} from 'mobx-react';
 import {useRootStore} from './stores/root';
 import LoginScreen from './screens/Login/LoginScreen';
+import ChatScreen from './screens/Chat/ChatScreen';
+import NotificationsScreen from './screens/Notifications/NotificationsScreen';
+import SettingsScreen from './screens/Settings/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const GroupIcon = style => <Icon {...style} name="message-circle" />;
-const NotificationIcon = style => <Icon {...style} name="bell" />;
-const SettingsIcon = style => <Icon {...style} name="settings" />;
-
-const BottomTabBar = ({navigation, state}) => (
-  <BottomNavigation
-    appearance="noIndicator"
-    selectedIndex={state.index}
-    onSelect={index => navigation.navigate(state.routeNames[index])}>
-    <BottomNavigationTab title="Home" icon={GroupIcon} />
-    <BottomNavigationTab title="Notifications" icon={NotificationIcon} />
-    <BottomNavigationTab title="Settings" icon={SettingsIcon} />
-  </BottomNavigation>
-);
-
 const HomeStack = () => (
-  <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+  <Stack.Navigator
+    initialRouteName="Index"
+    screenOptions={{headerShown: false}}>
     <Stack.Screen name="Index" component={HomeScreen} />
   </Stack.Navigator>
 );
@@ -57,8 +39,8 @@ const SettingsStack = () => (
   </Stack.Navigator>
 );
 
-const TabNavigator = () => (
-  <Tab.Navigator tabBar={props => <BottomTabBar {...props} />}>
+const TabStack = () => (
+  <Tab.Navigator>
     <Tab.Screen name="Home" component={HomeStack} />
     <Tab.Screen name="Notifications" component={NotificationsStack} />
     <Tab.Screen name="Settings" component={SettingsStack} />
@@ -89,22 +71,15 @@ export const AppNavigator = observer(() => {
       }}>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {authStore.isLogin ? (
-          <Stack.Group>
-            <Stack.Screen name="Tab" component={TabNavigator} />
+          <Fragment>
+            <Stack.Screen name="Tab" component={TabStack} />
             <Stack.Screen name="Web" component={MyWeb} />
             <Stack.Screen name="Chat" component={ChatScreen} />
-          </Stack.Group>
+          </Fragment>
         ) : (
-          <Stack.Group>
-            <Stack.Screen
-              name="Login"
-              component={LoginScreen}
-              options={{
-                title: 'Sign in',
-                animationTypeForReplace: authStore.isLogin ? 'pop' : 'push',
-              }}
-            />
-          </Stack.Group>
+          <Fragment>
+            <Stack.Screen name="Login" component={LoginScreen} />
+          </Fragment>
         )}
       </Stack.Navigator>
     </NavigationContainer>

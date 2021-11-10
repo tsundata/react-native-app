@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import {TopNavigation, withStyles} from '@ui-kitten/components';
-import styles from './ChatScreen.style';
 import {MessageType, Chat, defaultTheme} from '@flyerhq/react-native-chat-ui';
 import {launchImageLibrary} from 'react-native-image-picker';
 import DocumentPicker from 'react-native-document-picker';
@@ -18,7 +16,7 @@ const uuidv4 = () => {
   });
 };
 
-const ChatScreenComponent = () => {
+const ChatScreen = () => {
   const {showActionSheetWithOptions} = useActionSheet();
   const [messages, setMessages] = useState([]);
   const user = {id: '06c33e8b-e835-4736-80f4-63f44b66666c'};
@@ -170,7 +168,6 @@ const ChatScreenComponent = () => {
 
   return (
     <SafeAreaView style={{flex: 1}} edges={['top', 'left', 'right']}>
-      <TopNavigation title="Chat" alignment={'center'} />
       <Chat
         messages={messages}
         onAttachmentPress={handleAttachmentPress}
@@ -192,5 +189,4 @@ const ChatScreenComponent = () => {
   );
 };
 
-const ChatScreen = withStyles(ChatScreenComponent, styles);
 export default ChatScreen;

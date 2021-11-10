@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {Layout} from '@ui-kitten/components';
+import {Center} from 'native-base';
 
 const NotificationsScreen = ({navigation, route}) => {
   return (
-    <Layout style={{flex: 1}}>
+    <Center safeArea>
       <Text style={{textAlign: 'center', margin: 15}}>
         This is Notifications
       </Text>
-    </Layout>
+    </Center>
   );
 };
 
