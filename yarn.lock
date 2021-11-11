@@ -7258,6 +7258,11 @@ react-devtools-core@^4.13.0:
     shell-quote "^1.6.1"
     ws "^7"
 
+react-freeze@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/react-freeze/download/react-freeze-1.0.0.tgz#b21c65fe1783743007c8c9a2952b1c8879a77354"
+  integrity sha1-shxl/heDdDAHyMmilSsciHmnc1Q=
+
 "react-is@^16.12.0 || ^17.0.0", react-is@^17.0.1, react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
@@ -7325,6 +7330,11 @@ react-native-image-viewing@^0.2.1:
   resolved "https://registry.npmmirror.com/react-native-image-viewing/download/react-native-image-viewing-0.2.1.tgz#ab06ed41d932cd12d0c54f48316de505fc5c06c0"
   integrity sha1-qwbtQdkyzRLQxU9IMW3lBfxcBsA=
 
+react-native-pager-view@^5.4.9:
+  version "5.4.9"
+  resolved "https://registry.npmmirror.com/react-native-pager-view/download/react-native-pager-view-5.4.9.tgz#c0d40847cfeda5a4e729b53271b0ee0fedff3eb5"
+  integrity sha512-D6tzxpwMGdl6CXgtskGWhKRc5cJakCazESRGt7PkqnpyiH3N35ft1KmR82pCSQetAFlytFiToeu3a/dG5CELvA==
+
 react-native-parsed-text@^0.0.22:
   version "0.0.22"
   resolved "https://registry.nlark.com/react-native-parsed-text/download/react-native-parsed-text-0.0.22.tgz#a23c756eaa5d6724296814755085127f9072e5f5"
@@ -7342,6 +7352,14 @@ react-native-safe-area-context@^3.3.2:
   resolved "https://registry.nlark.com/react-native-safe-area-context/download/react-native-safe-area-context-3.3.2.tgz#9549a2ce580f2374edb05e49d661258d1b8bcaed"
   integrity sha1-lUmizlgPI3TtsF5J1mEljRuLyu0=
 
+react-native-screens@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.npmmirror.com/react-native-screens/download/react-native-screens-3.9.0.tgz#39b79f0e50b9d68ec822d333bc76e7aaee90f3fd"
+  integrity sha1-ObefDlC51o7IItMzvHbnqu6Q8/0=
+  dependencies:
+    react-freeze "^1.0.0"
+    warn-once "^0.1.0"
+
 react-native-snackbar@^2.4.0:
   version "2.4.0"
   resolved "https://registry.nlark.com/react-native-snackbar/download/react-native-snackbar-2.4.0.tgz#dd9687f5228e379ecd57678a921e546331681bcf"
@@ -7354,6 +7372,11 @@ react-native-svg@^12.1.1:
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
+
+react-native-tab-view@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.nlark.com/react-native-tab-view/download/react-native-tab-view-3.1.1.tgz#1f8d7a835ab4f5b1b1407ec8dddc1053b53fa3c6"
+  integrity sha1-H416g1q09bGxQH7I3dwQU7U/o8Y=
 
 react-native-webview@^11.14.1:
   version "11.14.2"

@@ -1,20 +1,28 @@
-const styles = theme => ({
-  highlight: {
-    fontWeight: '700',
-    color: '#ff0000',
-  },
-  list: {
+import * as React from 'react';
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
   },
-  header: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 8,
+  tabView: {
+    backgroundColor: '#fff',
   },
-  item: {
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: 'background-basic-color-3',
+  tag: {
+    backgroundColor: '#EDF6FD',
+    borderRadius: 4,
+    margin: 5,
+    color: '#4D92E9',
+    fontSize: 11,
+    paddingLeft: 5,
+    paddingRight: 5,
+  },
+  number: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: '#4D92E9',
+    color: '#fff',
   },
 });
 

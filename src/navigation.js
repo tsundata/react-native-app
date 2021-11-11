@@ -19,29 +19,30 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const HomeStack = () => (
-  <Stack.Navigator
-    initialRouteName="Index"
-    screenOptions={{headerShown: false}}>
-    <Stack.Screen name="Index" component={HomeScreen} />
+  <Stack.Navigator initialRouteName="Index">
+    <Stack.Screen
+      name="Index"
+      component={HomeScreen}
+      options={{
+        title: 'All (open)',
+        headerRight: () => <SearchIcon size={5} mr={5} />,
+      }}
+    />
   </Stack.Navigator>
 );
 const NotificationsStack = () => (
-  <Stack.Navigator
-    initialRouteName="Notifications"
-    screenOptions={{headerShown: false}}>
+  <Stack.Navigator initialRouteName="Notifications">
     <Stack.Screen name="Notifications" component={NotificationsScreen} />
   </Stack.Navigator>
 );
 const SettingsStack = () => (
-  <Stack.Navigator
-    initialRouteName="Settings"
-    screenOptions={{headerShown: false}}>
+  <Stack.Navigator initialRouteName="Settings">
     <Stack.Screen name="Settings" component={SettingsScreen} />
   </Stack.Navigator>
 );
 
 const TabStack = () => (
-  <Tab.Navigator>
+  <Tab.Navigator screenOptions={{headerShown: false}}>
     <Tab.Screen
       name="HomeTab"
       component={HomeStack}
@@ -98,7 +99,11 @@ export const AppNavigator = observer(() => {
           <Fragment>
             <Stack.Screen name="Tab" component={TabStack} />
             <Stack.Screen name="Web" component={MyWeb} />
-            <Stack.Screen name="Chat" component={ChatScreen} />
+            <Stack.Screen
+              name="Chat"
+              component={ChatScreen}
+              options={{title: 'Chat', headerShown: true}}
+            />
           </Fragment>
         ) : (
           <Fragment>
