@@ -13,6 +13,7 @@ import LoginScreen from './screens/Login/LoginScreen';
 import ChatScreen from './screens/Chat/ChatScreen';
 import NotificationsScreen from './screens/Notifications/NotificationsScreen';
 import SettingsScreen from './screens/Settings/SettingsScreen';
+import {CheckIcon, QuestionIcon, SearchIcon} from 'native-base';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -41,9 +42,32 @@ const SettingsStack = () => (
 
 const TabStack = () => (
   <Tab.Navigator>
-    <Tab.Screen name="HomeTab" component={HomeStack} />
-    <Tab.Screen name="NotificationsTab" component={NotificationsStack} />
-    <Tab.Screen name="SettingsTab" component={SettingsStack} />
+    <Tab.Screen
+      name="HomeTab"
+      component={HomeStack}
+      options={{
+        title: 'Home',
+        tabBarIcon: ({color, size}) => <CheckIcon color={color} size={size} />,
+      }}
+    />
+    <Tab.Screen
+      name="NotificationsTab"
+      component={NotificationsStack}
+      options={{
+        title: 'Notifications',
+        tabBarIcon: ({color, size}) => <SearchIcon color={color} size={size} />,
+      }}
+    />
+    <Tab.Screen
+      name="SettingsTab"
+      component={SettingsStack}
+      options={{
+        title: 'Settings',
+        tabBarIcon: ({color, size}) => (
+          <QuestionIcon color={color} size={size} />
+        ),
+      }}
+    />
   </Tab.Navigator>
 );
 
