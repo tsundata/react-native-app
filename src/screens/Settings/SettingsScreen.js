@@ -37,7 +37,10 @@ const SettingsScreen = ({navigation, route}) => {
       </HStack>
       <Divider />
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('NotificationPreferences');
+        }}>
         <Flex style={styles.settingItem}>
           <Box ml={5}>Notification Preferences</Box>
           <InfoOutlineIcon mr={5} size={5} />
