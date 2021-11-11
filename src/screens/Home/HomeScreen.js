@@ -60,7 +60,7 @@ const HomeScreen = ({navigation}) => {
   };
 
   const firstRoute = () => (
-    <Center safeArea>
+    <Center>
       <FlatList
         data={initialGroups}
         renderItem={props => <GroupListItem {...props} />}
