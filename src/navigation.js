@@ -5,7 +5,6 @@ import {
 } from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/Home/HomeScreen';
-import {MyWeb} from './screens/web';
 import {createStackNavigator} from '@react-navigation/stack';
 import {observer} from 'mobx-react';
 import {useRootStore} from './stores/root';
@@ -16,6 +15,7 @@ import SettingsScreen from './screens/Settings/SettingsScreen';
 import {CheckIcon, QuestionIcon, SearchIcon} from 'native-base';
 import ChangeLanguageScreen from './screens/ChangeLanguage/ChangeLanguageScreen';
 import NotificationPreferencesScreen from './screens/NotificationPreferences/NotificationPreferencesScreen';
+import WebScreen from './screens/WebScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -105,7 +105,11 @@ export const AppNavigator = observer(() => {
         {authStore.isLogin ? (
           <Fragment>
             <Stack.Screen name="Tab" component={TabStack} />
-            <Stack.Screen name="Web" component={MyWeb} />
+            <Stack.Screen
+              name="Web"
+              component={WebScreen}
+              options={{headerShown: true}}
+            />
             <Stack.Screen
               name="Chat"
               component={ChatScreen}

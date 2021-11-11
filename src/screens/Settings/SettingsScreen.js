@@ -59,7 +59,12 @@ const SettingsScreen = ({navigation, route}) => {
       </TouchableOpacity>
       <Divider />
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Web', {
+            url: 'https://reactnavigation.org',
+          });
+        }}>
         <Flex style={styles.settingItem}>
           <Box ml={5}>Help Docs</Box>
           <QuestionIcon mr={5} size={5} />
