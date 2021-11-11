@@ -14,6 +14,7 @@ import ChatScreen from './screens/Chat/ChatScreen';
 import NotificationsScreen from './screens/Notifications/NotificationsScreen';
 import SettingsScreen from './screens/Settings/SettingsScreen';
 import {CheckIcon, QuestionIcon, SearchIcon} from 'native-base';
+import ChangeLanguageScreen from './screens/ChangeLanguage/ChangeLanguage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -38,6 +39,7 @@ const NotificationsStack = () => (
 const SettingsStack = () => (
   <Stack.Navigator initialRouteName="Settings">
     <Stack.Screen name="Settings" component={SettingsScreen} />
+    <Stack.Screen name="ChangeLanguage" component={ChangeLanguageScreen} />
   </Stack.Navigator>
 );
 

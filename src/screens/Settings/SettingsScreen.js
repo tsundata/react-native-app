@@ -45,7 +45,10 @@ const SettingsScreen = ({navigation, route}) => {
       </TouchableOpacity>
       <Divider />
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('ChangeLanguage');
+        }}>
         <Flex style={styles.settingItem}>
           <Box ml={5}>Change language</Box>
           <HamburgerIcon mr={5} size={5} />
