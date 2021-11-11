@@ -1,5 +1,10 @@
 {
   "HOME":{
     "TITLE":"首页"
+  },
+  "TAB":{
+    "HOME":"首页",
+    "NOTIFICATIONS":"通知",
+    "SETTINGS":"设置"
   }
 }

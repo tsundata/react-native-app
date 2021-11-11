@@ -24,15 +24,15 @@ const SettingsScreen = ({navigation, route}) => {
       <HStack alignItems="center">
         <Avatar
           source={{
-            uri: 'https://demo.com/demo.jpg',
+            uri: authStore.user.avatar,
           }}
           margin={3}>
           a
           <Avatar.Badge bg="green.500" />
         </Avatar>
         <Box>
-          <Text style={{fontSize: 13}}>Admin</Text>
-          <Text style={{fontSize: 11}}>admin@tsundata.com</Text>
+          <Text style={{fontSize: 13}}>{authStore.user.username}</Text>
+          <Text style={{fontSize: 11}}>{authStore.user.email}</Text>
         </Box>
       </HStack>
       <Divider />

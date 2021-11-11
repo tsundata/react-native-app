@@ -16,6 +16,7 @@ import {CheckIcon, QuestionIcon, SearchIcon} from 'native-base';
 import ChangeLanguageScreen from './screens/ChangeLanguage/ChangeLanguageScreen';
 import NotificationPreferencesScreen from './screens/NotificationPreferences/NotificationPreferencesScreen';
 import WebScreen from './screens/WebScreen';
+import i18n from './i18n';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -54,7 +55,7 @@ const TabStack = () => (
       name="HomeTab"
       component={HomeStack}
       options={{
-        title: 'Home',
+        title: i18n.t('TAB.HOME'),
         tabBarIcon: ({color, size}) => <CheckIcon color={color} size={size} />,
       }}
     />
@@ -62,7 +63,7 @@ const TabStack = () => (
       name="NotificationsTab"
       component={NotificationsStack}
       options={{
-        title: 'Notifications',
+        title: i18n.t('TAB.NOTIFICATIONS'),
         tabBarIcon: ({color, size}) => <SearchIcon color={color} size={size} />,
       }}
     />
@@ -70,7 +71,7 @@ const TabStack = () => (
       name="SettingsTab"
       component={SettingsStack}
       options={{
-        title: 'Settings',
+        title: i18n.t('TAB.SETTINGS'),
         tabBarIcon: ({color, size}) => (
           <QuestionIcon color={color} size={size} />
         ),

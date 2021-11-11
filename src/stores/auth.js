@@ -3,6 +3,11 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {login} from '../api/api';
 
 export class AuthStore {
+  user = {
+    username: 'admin',
+    avatar: 'https://demo.com/demo.jpg',
+    email: 'admin@tsundata.com',
+  };
   token = '';
   isLogin = false;
 

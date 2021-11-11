@@ -1,5 +1,10 @@
 {
   "HOME":{
     "TITLE":"home"
+  },
+  "TAB":{
+    "HOME":"home",
+    "NOTIFICATIONS":"notifications",
+    "SETTINGS":"settings"
   }
 }
