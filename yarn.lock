@@ -7690,10 +7690,10 @@ react-native-tab-view@^3.1.1:
   resolved "https://registry.nlark.com/react-native-tab-view/download/react-native-tab-view-3.1.1.tgz#1f8d7a835ab4f5b1b1407ec8dddc1053b53fa3c6"
   integrity sha1-H416g1q09bGxQH7I3dwQU7U/o8Y=
 
-react-native-webview@^11.14.1:
-  version "11.14.2"
-  resolved "https://registry.npmmirror.com/react-native-webview/download/react-native-webview-11.14.2.tgz#31e62864b28f950fd887bf20469fe8cd71101d29"
-  integrity sha1-MeYoZLKPlQ/Yh78gRp/ozXEQHSk=
+react-native-webview@^11.14.4:
+  version "11.14.4"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.14.4.tgz#e654714f1792901e5208fb03f2dc0a0fb4afc344"
+  integrity sha512-667NNC1VEjl8PNBwGiEllWe7QhcqauCFeisL4Pk9cgQbtCiacemYF+8d+VJg27eMGJ0G05RFgpB5aDZbBcNhmw==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
