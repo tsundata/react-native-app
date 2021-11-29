@@ -7273,10 +7273,10 @@ react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
-react-native-actions-sheet@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.npmmirror.com/react-native-actions-sheet/download/react-native-actions-sheet-0.5.4.tgz#e2aae80f4791772cb5f8426a2bfe2e1154eb62b9"
-  integrity sha1-4qroD0eRdyy1+EJqK/4uEVTrYrk=
+react-native-actions-sheet@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/react-native-actions-sheet/-/react-native-actions-sheet-0.5.8.tgz#9367a7a2cbadd7b0cff82eb5e72c27578c13222d"
+  integrity sha512-bucvVl2lU0k0ogq6dDmJTKDa28SOGM8sMdr14qflnbqcSYEJH0YT+DWoJXzsocdNvXMBsdqM5J8bX+k6weIKFg==
 
 react-native-codegen@^0.0.7:
   version "0.0.7"
@@ -7320,10 +7320,10 @@ react-native-gesture-handler@^1.10.3:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-image-picker@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npmmirror.com/react-native-image-picker/download/react-native-image-picker-4.1.2.tgz#1b4b4980a6878930675396c23dffbaa802cbbcc6"
-  integrity sha1-G0tJgKaHiTBnU5bCPf+6qALLvMY=
+react-native-image-picker@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-4.3.0.tgz#d68640061d3c5e6bef1d417c8085828318162874"
+  integrity sha512-YJtpuNHK7PS4ujbsSVAL6rKW4QQEDTf80MxuPmwByYgMi01VbfkXZ/8+pf61ctOED3Z0ZZKbk7/3pJ0dQHVAbg==
 
 react-native-image-viewing@^0.2.1:
   version "0.2.1"
