@@ -31,7 +31,7 @@
     "lodash.groupby": "^4.6.0",
     "md5": "^2.3.0",
     "mobx": "^6.3.5",
-    "mobx-react": "^7.2.0",
+    "mobx-react": "^7.2.1",
     "moment": "^2.29.1",
     "native-base": "^3.2.2",
     "prop-types": "^15.7.2",
@@ -51,7 +51,7 @@
     "react-native-snackbar": "^2.4.0",
     "react-native-svg": "^12.1.1",
     "react-native-tab-view": "^3.1.1",
-    "react-native-webview": "^11.14.1",
+    "react-native-webview": "^11.14.4",
     "rollbar-react-native": "^0.9.2",
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5"
