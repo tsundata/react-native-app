@@ -3033,10 +3033,10 @@ atob@^2.1.2:
   resolved "https://registry.nlark.com/atob/download/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha1-bZUX654DDSQ2ZmZR6GvZ9vE1M8k=
 
-axios-logger@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.npm.taobao.org/axios-logger/download/axios-logger-2.5.0.tgz#4e5d354241a693982ddb0ae80d33ea4d6a2ffa2d"
-  integrity sha1-Tl01QkGmk5gt2wroDTPqTWov+i0=
+axios-logger@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/axios-logger/-/axios-logger-2.6.0.tgz#8baa8164846481530b1f822bf760eaf004d33d98"
+  integrity sha512-ogDepYNCul91KWf+BV8tweB3gm4n2apA69L9aY5fUO2Pvck/gIK4Q+zs7avduyxaOn88ZzSWv0PeMZaxBt+YOw==
   dependencies:
     "@types/dateformat" "^3.0.1"
     chalk "^4.1.0"
