@@ -8,33 +8,24 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+
+    - name: Use Node.js 12.x
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12.x
         cache: 'npm'
-    - run: npm install
 
-#     - run: ./gradlew assembleDebug -Dorg.gradle.logging.level=info
-#       working-directory: android
-#       name: Build Android apk (debug)
-#     - uses: actions/upload-artifact@v2
-#       with:
-#         name: android-apk
-#         path: '**/*.apk'
+    - run: npm install
     
     - run: xcode-select -p
+
     - run: pod install
       working-directory: ios
       name: Install pod dependencies
+
     - name: Build iOS (debug)
-      run: "xcodebuild -workspace ios/flow.xcworkspace -scheme flow clean archive -sdk iphoneos -configuration Debug -UseModernBuildSystem=NO -archivePath $PWD/flow CODE_SIGNING_ALLOWED=NO"
+      run: npx react-native run-ios
