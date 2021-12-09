@@ -7497,10 +7497,10 @@ react-native-gesture-handler@^2.1.0:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-image-picker@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-4.4.1.tgz#f1728af7c412fabf39e6ef9c962155a957367f30"
-  integrity sha512-S2jIPWsL31Pd2Ag+r90smVWraLvybFiya8tMn32zBWUoPRumqeCcQ7TzuE1hVM84CCx7hxyCdmTMXBYkkoe4OA==
+react-native-image-picker@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-4.4.2.tgz#808f906307731a63c71f93bf532e81b9f81503df"
+  integrity sha512-+qy5RZ908X4WGYsOrWQPnBrte9WKS4BIfYFmmBgqlNKWHx6MAWjD9hvxjmZTW7uTm5QxXoo+0f7kpkn2H4SKpw==
 
 react-native-image-viewing@^0.2.1:
   version "0.2.1"
