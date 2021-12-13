@@ -7481,10 +7481,10 @@ react-native-exception-handler@^2.10.10:
   resolved "https://registry.nlark.com/react-native-exception-handler/download/react-native-exception-handler-2.10.10.tgz#b6bfe2b7e6ea4a4deb1f518f48ce2ee1d4843497"
   integrity sha1-tr/it+bqSk3rH1GPSM4u4dSENJc=
 
-react-native-file-viewer@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.npm.taobao.org/react-native-file-viewer/download/react-native-file-viewer-2.1.4.tgz#987b2902f0f0ac87b42f3ac3d3037c8ae98f17a6"
-  integrity sha1-mHspAvDwrIe0LzrD0wN8iumPF6Y=
+react-native-file-viewer@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-file-viewer/-/react-native-file-viewer-2.1.5.tgz#cd4544f573108e79002b5c7e1ebfce4371885250"
+  integrity sha512-MGC6sx9jsqHdefhVQ6o0akdsPGpkXgiIbpygb2Sg4g4bh7v6K1cardLV1NwGB9A6u1yICOSDT/MOC//9Ez6EUg==
 
 react-native-gesture-handler@^2.1.0:
   version "2.1.0"
