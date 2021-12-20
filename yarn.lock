@@ -4441,10 +4441,10 @@ expect@^27.4.2:
     jest-message-util "^27.4.2"
     jest-regex-util "^27.4.0"
 
-expo-asset@^8.4.3:
-  version "8.4.3"
-  resolved "https://registry.npmmirror.com/expo-asset/download/expo-asset-8.4.3.tgz#a65be884361926ef5f19ea0621edc36a2f502605"
-  integrity sha1-plvohDYZJu9fGeoGIe3Dai9QJgU=
+expo-asset@^8.4.4:
+  version "8.4.4"
+  resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-8.4.4.tgz#6214270a41af378ac734a28fbff7b542ca84a3cf"
+  integrity sha512-0yxAOJo8bnYvnRNOWikQ1xFP+YQViJ/px3MofZFUPGw02iaSSUzArcKDfMtpJNmH/EC7HE7GJSZpkoxx+zsHWA==
   dependencies:
     blueimp-md5 "^2.10.0"
     invariant "^2.2.4"
