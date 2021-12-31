@@ -57,9 +57,9 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
+    "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.16.7",
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "^7.16.7",
     "@react-native-community/eslint-config": "^3.0.1",
     "axios-logger": "^2.6.0",
     "babel-jest": "^27.4.5",
