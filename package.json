@@ -24,7 +24,7 @@
     "axios": "^0.24.0",
     "expo-asset": "^8.4.5",
     "expo-constants": "^13.0.0",
-    "expo-file-system": "^13.1.0",
+    "expo-file-system": "^13.2.0",
     "expo-font": "^10.0.4",
     "i18n-js": "^3.8.0",
     "lodash": "^4.17.21",
