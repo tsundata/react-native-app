@@ -1061,10 +1061,10 @@
     base64-js "^1.2.3"
     xmlbuilder "^14.0.0"
 
-"@expo/react-native-action-sheet@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.npmmirror.com/@expo/react-native-action-sheet/download/@expo/react-native-action-sheet-3.12.0.tgz#8c4054b3d3856fea77d9c8d95c0d7b51d4eee13b"
-  integrity sha1-jEBUs9OFb+p32cjZXA17UdTu4Ts=
+"@expo/react-native-action-sheet@^3.13.0":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@expo/react-native-action-sheet/-/react-native-action-sheet-3.13.0.tgz#b4cb08440c54b5ec0b3e429cac396422da1d9442"
+  integrity sha512-EFLK35TBsM28W43SY54lISAIvjEm9584LIRWXsYaf5sgmfF65oWAOQP4UyKxMPLYGoaKjnCAJVFNtZUK80ss9A==
   dependencies:
     "@types/hoist-non-react-statics" "^3.3.1"
     hoist-non-react-statics "^3.3.0"
