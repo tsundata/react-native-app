@@ -6882,10 +6882,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-base@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.3.2.tgz#d4dba1f3eac86725769600f210c65e8af400a95b"
-  integrity sha512-hz0rmgvBMUrP3Y2neBDBfTiiiypWY8QqQPhTeqVqKxCGGWfX01ofB9Tn8/0QqhNqw7gtl9VoV345HmF0IPtRqw==
+native-base@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.3.3.tgz#b75c7ac6b4af97fd9820c4074c3b820a9215588b"
+  integrity sha512-UayjmZQmv5qj/4S5CcdO3rDTrG7ZNmb7mXrp/lMQT6ZKW/0AJJhqALz3r9XqkYMrBQzO8dejBkEhFU+cvusBgA==
   dependencies:
     "@react-aria/focus" "^3.2.3"
     "@react-aria/utils" "^3.6.0"
@@ -7679,10 +7679,10 @@ react-native-webview@^11.16.0:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
 
-react-native@0.67.0:
-  version "0.67.0"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.67.0.tgz#401c0ab75566f1086ad194ef9c3e4551c10c14e5"
-  integrity sha512-LTrLbZhapgsF0J1fgKvkMVealNKVZ+Fp3XWVFHWmglVQvdmALdcafZR2Plvhe9IH8KJddj3LAU9nV3rHot7q4Q==
+react-native@0.67.1:
+  version "0.67.1"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.67.1.tgz#a9cc13f1a691e9bb23f146f001e11fc0157af51c"
+  integrity sha512-doKN9qhtjilF+6p8603OVzqGKL4fq8EDAH5u00KPmZbL5ampHDQX9y8/uwlUvJggvHwZXlnvhW63u8Y1LA8rxw==
   dependencies:
     "@jest/create-cache-key-function" "^27.0.1"
     "@react-native-community/cli" "^6.0.0"
