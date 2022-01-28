@@ -1032,10 +1032,10 @@
   resolved "https://registry.npmmirror.com/@flyerhq/react-native-keyboard-accessory-view/download/@flyerhq/react-native-keyboard-accessory-view-2.3.3.tgz#e79f9f8150d3eff06839698b1e0fde2ea1a7bc0c"
   integrity sha1-55+fgVDT7/BoOWmLHg/eLqGnvAw=
 
-"@flyerhq/react-native-link-preview@^1.5.2":
-  version "1.5.2"
-  resolved "https://registry.npmmirror.com/@flyerhq/react-native-link-preview/download/@flyerhq/react-native-link-preview-1.5.2.tgz#a3c97820dca7b548efa58ee43019272463634861"
-  integrity sha1-o8l4INyntUjvpY7kMBknJGNjSGE=
+"@flyerhq/react-native-link-preview@^1.5.2", "@flyerhq/react-native-link-preview@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@flyerhq/react-native-link-preview/-/react-native-link-preview-1.6.0.tgz#c7285ab93a133328edc5d69b011822581bb4414b"
+  integrity sha512-MY2Kxlf3SzLVUAuGU2LXhDU0a2icNBWL7MDCA8BNpmKqsWI+tHjX3mHm5nGpsLweYG5wsajzBd5XS0KCXNPkJA==
   dependencies:
     html-entities "^2.3.2"
 
